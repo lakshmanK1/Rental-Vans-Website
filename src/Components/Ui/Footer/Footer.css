@@ -1,0 +1,17 @@
+footer {
+  width: 100%;
+  background: #252525;
+}
+
+.copy-right-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  /* or 164% */
+
+  text-align: center;
+
+  color: #AAAAAA;
+}

@@ -1,0 +1,49 @@
+.vans-list-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 34px;
+  color: #161616;
+  padding: 1rem;
+}
+
+.vans-list-main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.vanlist-tabs-div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.vanlist-tab {
+  background: #ffead0;
+  border-radius: 5px;
+  padding: 0.8rem;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  text-align: center;
+
+  color: #4d4d4d;
+}
+
+.vanlist-filter-tab {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  text-decoration-line: underline;
+
+  color: #4d4d4d;
+}
+
+

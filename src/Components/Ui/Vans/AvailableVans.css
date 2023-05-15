@@ -1,0 +1,50 @@
+.avail-vans-div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.single-avail-van {
+  width: 100%;
+}
+
+.availvan-details-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avail-van-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #161616;
+}
+
+.avail-van-price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: right;
+  color: #161616;
+}
+
+.avail-van-btn {
+  background: #e17654;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffead0;
+  padding: 0.3rem;
+}

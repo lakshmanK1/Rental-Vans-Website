@@ -5,6 +5,7 @@ import Footer from './Components/Ui/Footer/Footer';
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import OurVans from './Pages/OurVans/OurVans';
+import SingleVanDetails from './Pages/SingleVanDetails/SingleVanDetails';
 
 import {Route, Routes} from 'react-router-dom'
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/aboutus' element={<About/>} />
         <Route path='/vans' element={<OurVans/>} />
+        <Route path='/vans/:id' element={<SingleVanDetails/>}/>
       </Routes>
     </div>
     <Footer/>

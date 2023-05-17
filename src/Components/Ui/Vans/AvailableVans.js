@@ -1,12 +1,14 @@
 import React from "react";
 import "./AvailableVans.css";
 import { Vans } from "./AllVans";
+import {Link} from 'react-router-dom'
 
 function AvailableVans() {
   return (
     <div className="avail-vans-div">
       {Vans.map((data) => {
         return (
+          <Link to={`/vans/${data.id}`} key={data.id}>
           <div className="single-avail-van" key={data.id}>
             <img className="avaul-van-img" src={data.img} alt="van" />
             <div className="availvan-details-div">
@@ -15,6 +17,7 @@ function AvailableVans() {
             </div>
             <button className="avail-van-btn">{data.button}</button>
           </div>
+          </Link>
         );
       })}
     </div>

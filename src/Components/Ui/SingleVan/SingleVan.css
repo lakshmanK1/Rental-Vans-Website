@@ -1,0 +1,57 @@
+.singlevan-main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.singlevan-img {
+  width: 50%;
+  padding: 1rem;
+}
+
+.singlevan-back-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 23px;
+  text-decoration-line: underline;
+  color: #201f1d;
+}
+
+.singlevan-description {
+  width: 50%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 24px;
+  color: #161616;
+}
+
+.singlevan-name {
+  width: 50%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 34px;
+  color: #161616;
+  padding: 0.5rem;
+}
+
+.singlevan-price {
+  width: 50%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 44px;
+  color: #161616;
+}
+
+.singlevan-span {
+  background: #e17654;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5em;
+}

@@ -1,27 +1,59 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {CgMenu} from 'react-icons/cg'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { CgMenu } from "react-icons/cg";
 
-
-import './Header.css'
+import "./Header.css";
 
 function Header() {
+  const isActiveStyle = {
+    fontWeight: "bold",
+    textDecoration: "underline",
+    color: "#161616",
+  };
+
   return (
     <header>
-      <div className='logo-div'>
-        <Link className='logo-title'>VanLife</Link>
+      <div className="logo-div">
+        <NavLink className="logo-title" to="/">
+          VanLife
+        </NavLink>
       </div>
 
-        <nav>
-          <ul>
-            <li><Link className='link-tab' to='/'>Home</Link></li>
-            <li><Link className='link-tab' to='/vans'>Vans</Link></li>
-            <li><Link className='link-tab' to='/aboutus'>About</Link></li>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <NavLink
+              className="navlink-tab"
+              style={({ isActive }) => (isActive ? isActiveStyle : null)}
+              to="/host"
+            >
+              Host
+            </NavLink>
+          </li>
 
+          <li>
+            <NavLink
+              className="navlink-tab"
+              style={({ isActive }) => (isActive ? isActiveStyle : null)}
+              to="/vans"
+            >
+              Vans
+            </NavLink>
+          </li>
+          
+          <li>
+            <NavLink
+              className="navlink-tab"
+              style={({ isActive }) => (isActive ? isActiveStyle : null)}
+              to="/aboutus"
+            >
+              About
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

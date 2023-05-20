@@ -25,14 +25,20 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
-.link-tab {
+.navlink-tab {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.3rem;
   line-height: 23px;
   color: #4d4d4d;
+}
+
+.navlink-tab:hover{
+  text-decoration: underline;
+  font-weight: bold;
+  color: #161616;
 }

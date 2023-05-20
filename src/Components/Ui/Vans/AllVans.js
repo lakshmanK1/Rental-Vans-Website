@@ -1,4 +1,4 @@
-export const Vans = [
+export const AllVans = [
     {
         id:1,
         img:require('../../../Assets/Rectangle 154 (1).png'),

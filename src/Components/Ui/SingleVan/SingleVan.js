@@ -1,19 +1,18 @@
 import React,{useState, useEffect} from 'react'
 import {BsArrowLeft} from 'react-icons/bs'
 import {Link, useParams} from 'react-router-dom'
-import { Vans } from '../Vans/AllVans'
+import { AllVans } from '../Vans/AllVans'
 import './SingleVan.css'
 
 const initialData = [{id:123, name:'', button:'', description:'', price:'' }];
 
 function SingleVan() {
-    const [singlevan, setSingleVan] = useState(null);
+    const [singlevan, setSingleVan] = useState(initialData);
 
     const params = useParams();
-    console.log(typeof parseInt(params.id));
 
     useEffect(()=>{
-        const vanDetails = Vans.find((data) => data.id === parseInt(params.id));
+        const vanDetails = AllVans.find((data) => data.id === parseInt(params.id));
         setSingleVan(vanDetails);
     },[params.id])
     

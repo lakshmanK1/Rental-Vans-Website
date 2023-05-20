@@ -1,5 +1,7 @@
 .host-div {
-  width: 50%;
+  width: 70%;
+  gap: 1rem;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -41,10 +43,13 @@
 }
 
 .vans-single-div {
-  width: 80%;
+  width: 100%;
   background: #ffffff;
   border-radius: 6px;
   margin: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navlink{
@@ -55,14 +60,15 @@
 }
 
 .vans-img-div {
-  width: 50%;
+  width: 100%;
   padding: 1rem;
 }
 
 .vans-info-div {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0.5rem;
 }
 
 .vans-img {
@@ -85,4 +91,23 @@
   font-size: 1rem;
   line-height: 32px;
   color: #4d4d4d;
+}
+
+.vans-inner-img{
+  width: 100%;
+  max-width: 300px;
+}
+
+/*responsiveness*/
+
+@media screen and (max-width:750px) {
+  .host-div{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .vans-single-div{
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

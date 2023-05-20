@@ -6,6 +6,7 @@
   line-height: 34px;
   color: #161616;
   padding: 1rem;
+  text-align: center;
 }
 
 .vans-list-main {
@@ -47,3 +48,9 @@
 }
 
 
+/*responsiveness*/
+
+.vanlist-tabs-div{
+  display: grid;
+  grid-template-columns: auto auto;
+}

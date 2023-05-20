@@ -13,7 +13,7 @@ function Host() {
   return (
     <>
     <div className='host-div'>
-      <NavLink className='host-link' style={({isActive})=>isActive ? isActiveStyle : null} end to='/host'>dashboard</NavLink>
+      <NavLink className='host-link' style={({isActive})=>isActive ? isActiveStyle : null} end to='.'>dashboard</NavLink>
       <NavLink className='host-link' style={({isActive})=>isActive ? isActiveStyle : null} to='income'>income</NavLink>
       <NavLink className='host-link' style={({isActive})=>isActive ? isActiveStyle : null} to='allvans'>vans</NavLink>
       <NavLink className='host-link' style={({isActive})=>isActive ? isActiveStyle : null} to='reviews'>reviews</NavLink>

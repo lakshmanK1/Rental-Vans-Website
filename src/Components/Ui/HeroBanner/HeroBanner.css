@@ -1,14 +1,16 @@
 .hero-div {
-  width: 100%;
+  width: 95%;
   height: 40rem;
+  margin: 0 auto;
+  padding: 0.5rem;
   background-image: url("../../../Assets/home-hero.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero-text-div{
-    width: 30%;
-    margin: 0 auto;
+    width: 40%;
+    margin: 180px auto;
     padding: 3rem;
 }
 
@@ -43,4 +45,17 @@
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+/*responsiveness*/
+
+@media screen and (max-width:750px) {
+  .hero-div{
+    width: 100%;
+  }
+
+  .hero-text-div{
+    width: 90%;
+    padding: 1rem;
+  }
 }

@@ -12,17 +12,17 @@ function Vans() {
         {
           AllVans.map((data)=>{
             return(
+              <NavLink className='navlink' to={`${data.id}`}>
               <div className='vans-single-div' key={data.id}>
-                <NavLink className='navlink' to={`${data.id}`}>
                 <div className='vans-img-div'>
-                <img className='vans-inner-imag' src={data.img} alt={data.name}/>
+                <img className='vans-inner-img' src={data.img} alt={data.name}/>
                 </div>
                 <div className='vans-info-div'>
                   <h1 className='vans-inner-title'>{data.name}</h1>
                   <p className='vans-inner-price'>${data.price}/day</p>
                 </div>
-                </NavLink>
               </div>
+              </NavLink>
             )
           })
         }

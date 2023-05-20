@@ -48,3 +48,12 @@
   color: #ffead0;
   padding: 0.3rem;
 }
+
+
+/*responsiveness*/
+
+@media screen and (max-width:750px) {
+  .avail-vans-div{
+    grid-template-columns: auto;
+  }
+}

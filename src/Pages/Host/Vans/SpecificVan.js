@@ -25,7 +25,9 @@ function SpecificVan() {
       {speificvan ? (
         <>
           <div className="spec-van-backdiv">
+            <NavLink to='..' relative="path">
             <p className="spec-van-backtext"><BiArrowBack/>Back to vans</p>
+            </NavLink>
           </div>
           <div className="spec-van-details-div">
             <div className="specvan-innerdiv">
@@ -45,7 +47,7 @@ function SpecificVan() {
             </div>
 
             <div className='spec-van-navlinkdiv'>
-            <NavLink end to={`/host/allvans/${speificvan.id}`} style={({isActive})=>isActive ? isActiveStyle : null}>Details</NavLink>
+            <NavLink end to='.' style={({isActive})=>isActive ? isActiveStyle : null}>Details</NavLink>
             <NavLink to='pricing' style={({isActive})=>isActive ? isActiveStyle : null}>Pricing</NavLink>
             <NavLink to='photos' style={({isActive})=>isActive ? isActiveStyle : null}>Photos</NavLink>
           </div>

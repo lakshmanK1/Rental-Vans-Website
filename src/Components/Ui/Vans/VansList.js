@@ -5,7 +5,7 @@ import AvailableVans from './AvailableVans'
 function VansList() {
   return (
     <main className='vans-list-main'>
-    <h2 className='vans-list-title'>Explore our van options</h2>
+    <h2 className='vans-list-title'>Explore van options</h2>
     <div className='vanlist-tabs-div'>
         <span className='vanlist-tab'>Simple</span>
         <span className='vanlist-tab'>Luxury</span>

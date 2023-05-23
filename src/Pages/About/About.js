@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import AboutImage from '../../Assets/about-hero.png'
 import './About.css'
 
 function About() {
+
+  useEffect(()=>{
+    throw new Error('error at about cmp');
+  },[]);
+  
   return (
     <main className='about-main-div'>
         <img className='about-img' src={AboutImage} alt='about-image'/>

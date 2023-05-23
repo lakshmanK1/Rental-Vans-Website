@@ -1,12 +1,17 @@
 import React, { Suspense } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import ErrorBoundary from "./Components/Ui/ErrorBoundary/ErrorBoundary";
 
-const LayoutHeader = React.lazy(() => import("./Components/Ui/LayoutHeader/LayoutHeader"));
+const LayoutHeader = React.lazy(() =>
+  import("./Components/Ui/LayoutHeader/LayoutHeader")
+);
 const Home = React.lazy(() => import("./Pages/Home/Home"));
 const About = React.lazy(() => import("./Pages/About/About"));
 const OurVans = React.lazy(() => import("./Pages/OurVans/OurVans"));
-const SingleVanDetails = React.lazy(() => import("./Pages/SingleVanDetails/SingleVanDetails"));
+const SingleVanDetails = React.lazy(() =>
+  import("./Pages/SingleVanDetails/SingleVanDetails")
+);
 const Host = React.lazy(() => import("./Pages/Host/Host"));
 const DashBoard = React.lazy(() => import("./Pages/Host/DashBoard"));
 const Income = React.lazy(() => import("./Pages/Host/Income"));
@@ -25,25 +30,31 @@ function App() {
           <Route
             path="/"
             element={
-              <Suspense fallback={<div>Loading..</div>}>
-                <LayoutHeader />
-              </Suspense>
+              <ErrorBoundary>
+                <Suspense fallback={<div>Loading..</div>}>
+                  <LayoutHeader />
+                </Suspense>
+              </ErrorBoundary>
             }
           >
             <Route
               index
               element={
-                <Suspense fallback={<div>Loading..</div>}>
-                  <Home />
-                </Suspense>
+                <ErrorBoundary>
+                  <Suspense fallback={<div>Loading..</div>}>
+                    <Home />
+                  </Suspense>
+                </ErrorBoundary>
               }
             />
             <Route
               path="aboutus"
               element={
-                <Suspense fallback={<div>Loading..</div>}>
-                  <About />
-                </Suspense>
+                <ErrorBoundary>
+                  <Suspense fallback={<div>Loading..</div>}>
+                    <About />
+                  </Suspense>
+                </ErrorBoundary>
               }
             />
 
@@ -51,17 +62,21 @@ function App() {
               <Route
                 index
                 element={
-                  <Suspense fallback={<div>Loading..</div>}>
-                    <OurVans />
-                  </Suspense>
+                  <ErrorBoundary>
+                    <Suspense fallback={<div>Loading..</div>}>
+                      <OurVans />
+                    </Suspense>
+                  </ErrorBoundary>
                 }
               />
               <Route
                 path=":id"
                 element={
-                  <Suspense fallback={<div>Loading..</div>}>
-                    <SingleVanDetails />
-                  </Suspense>
+                  <ErrorBoundary>
+                    <Suspense fallback={<div>Loading..</div>}>
+                      <SingleVanDetails />
+                    </Suspense>
+                  </ErrorBoundary>
                 }
               />
             </Route>
@@ -69,74 +84,92 @@ function App() {
             <Route
               path="host"
               element={
-                <Suspense fallback={<div>Loading..</div>}>
-                  <Host />
-                </Suspense>
+                <ErrorBoundary>
+                  <Suspense fallback={<div>Loading..</div>}>
+                    <Host />
+                  </Suspense>
+                </ErrorBoundary>
               }
             >
               <Route
                 index
                 element={
-                  <Suspense fallback={<div>Loading..</div>}>
-                    <DashBoard />
-                  </Suspense>
+                  <ErrorBoundary>
+                    <Suspense fallback={<div>Loading..</div>}>
+                      <DashBoard />
+                    </Suspense>
+                  </ErrorBoundary>
                 }
               />
               <Route
                 path="income"
                 element={
-                  <Suspense fallback={<div>Loading..</div>}>
-                    <Income />
-                  </Suspense>
+                  <ErrorBoundary>
+                    <Suspense fallback={<div>Loading..</div>}>
+                      <Income />
+                    </Suspense>
+                  </ErrorBoundary>
                 }
               />
               <Route
                 path="reviews"
                 element={
-                  <Suspense fallback={<div>Loading..</div>}>
-                    <Reviews />
-                  </Suspense>
+                  <ErrorBoundary>
+                    <Suspense fallback={<div>Loading..</div>}>
+                      <Reviews />
+                    </Suspense>
+                  </ErrorBoundary>
                 }
               />
               <Route path="allvans">
                 <Route
                   index
                   element={
-                    <Suspense fallback={<div>Loading..</div>}>
-                      <Vans />
-                    </Suspense>
+                    <ErrorBoundary>
+                      <Suspense fallback={<div>Loading..</div>}>
+                        <Vans />
+                      </Suspense>
+                    </ErrorBoundary>
                   }
                 />
                 <Route
                   path=":id"
                   element={
-                    <Suspense fallback={<div>Loading..</div>}>
-                      <SpecificVan />
-                    </Suspense>
+                    <ErrorBoundary>
+                      <Suspense fallback={<div>Loading..</div>}>
+                        <SpecificVan />
+                      </Suspense>
+                    </ErrorBoundary>
                   }
                 >
                   <Route
                     index
                     element={
-                      <Suspense fallback={<div>Loading..</div>}>
-                        <Details />
-                      </Suspense>
+                      <ErrorBoundary>
+                        <Suspense fallback={<div>Loading..</div>}>
+                          <Details />
+                        </Suspense>
+                      </ErrorBoundary>
                     }
                   />
                   <Route
                     path="pricing"
                     element={
-                      <Suspense fallback={<div>Loading..</div>}>
-                        <Pricing />
-                      </Suspense>
+                      <ErrorBoundary>
+                        <Suspense fallback={<div>Loading..</div>}>
+                          <Pricing />
+                        </Suspense>
+                      </ErrorBoundary>
                     }
                   />
                   <Route
                     path="photos"
                     element={
-                      <Suspense fallback={<div>Loading..</div>}>
-                        <Photos />
-                      </Suspense>
+                      <ErrorBoundary>
+                        <Suspense fallback={<div>Loading..</div>}>
+                          <Photos />
+                        </Suspense>
+                      </ErrorBoundary>
                     }
                   />
                 </Route>

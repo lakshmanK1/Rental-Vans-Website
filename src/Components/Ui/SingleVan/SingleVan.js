@@ -4,7 +4,7 @@ import {Link, useParams} from 'react-router-dom'
 import { AllVans } from '../Vans/AllVans'
 import './SingleVan.css'
 
-const initialData = [{id:123, name:'', button:'', description:'', price:'' }];
+const initialData = [{id:123, name:'', type:'', description:'', price:'' }];
 
 function SingleVan() {
     const [singlevan, setSingleVan] = useState(initialData);
@@ -19,7 +19,7 @@ function SingleVan() {
 
   return (
     <main className='singlevan-main'>
-        <Link to='/vans'>
+        <Link to='..' relative='path'>
         <div className='singlevan-back'>
             <BsArrowLeft/>
             <span className='singlevan-back-text'>Back to vans</span>
@@ -31,7 +31,7 @@ function SingleVan() {
         </div>
 
         <div className='singlevan-details-div'>
-            <span className='singlevan-span'>{singlevan.button}</span>
+            <span className='singlevan-span'>{singlevan.type}</span>
             <h1 className='singlevan-name'>{singlevan.name}</h1>
             <p className='singlevan-price'>${singlevan.price}/day</p>
             <p className='singlevan-description'>{singlevan.description}</p>

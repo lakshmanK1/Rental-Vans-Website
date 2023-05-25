@@ -2,13 +2,13 @@ import React from "react";
 import "./AvailableVans.css";
 import {Link} from 'react-router-dom'
 
-function AvailableVans({filteredData, toStrParams}) {
+function AvailableVans({filteredData, toStrParams, urlSearchParams}) {
   console.log(toStrParams);
   return (
     <div className="avail-vans-div">
       {filteredData.map((data) => {
         return (
-          <Link to={`${data.id}`} state={{vanpage : 'helloState'}} key={data.id}>
+          <Link to={`${data.id}`} key={data.id} state={{search:`?${toStrParams}`, type:urlSearchParams}}>
           <div className="single-avail-van" key={data.id}>
             <img className="avaul-van-img" src={data.img} alt="van" />
             <div className="availvan-details-div">

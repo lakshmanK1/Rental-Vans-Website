@@ -1,0 +1,46 @@
+.notfound-main{
+    height: 40.1rem;
+}
+
+.notfound-div{
+    width: 85%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.error-icon{
+    width: 5rem;
+    height: 5rem;
+    color: red;
+}
+
+
+.notfound-header{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 34px;
+    color: #161616;
+    padding: 1rem;
+}
+
+.notfound-descrip{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 34px;
+    color: #161616;
+    padding: 1rem;
+}
+
+.notfound-btn{
+    color: white;
+    background-color: #161616;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 40%;
+}

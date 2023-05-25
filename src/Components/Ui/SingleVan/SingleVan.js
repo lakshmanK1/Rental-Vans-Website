@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import {BsArrowLeft} from 'react-icons/bs'
-import {Link, useParams} from 'react-router-dom'
+import {Link, useParams, useLocation} from 'react-router-dom'
 import { AllVans } from '../Vans/AllVans'
 import './SingleVan.css'
 
@@ -8,21 +8,25 @@ const initialData = [{id:123, name:'', type:'', description:'', price:'' }];
 
 function SingleVan() {
     const [singlevan, setSingleVan] = useState(initialData);
-
     const params = useParams();
+    const location = useLocation();
+
+    console.log(location);
 
     useEffect(()=>{
         const vanDetails = AllVans.find((data) => data.id === parseInt(params.id));
         setSingleVan(vanDetails);
     },[params.id])
     
+    const search = location.state?.search || '';
+    const type = location.state?.type || 'all';
 
   return (
     <main className='singlevan-main'>
-        <Link to='..' relative='path'>
+        <Link to={`..${search}`} relative='path'>
         <div className='singlevan-back'>
             <BsArrowLeft/>
-            <span className='singlevan-back-text'>Back to vans</span>
+            <span className='singlevan-back-text'>{`Back to ${type} vans`}</span>
         </div>
         </Link>
     

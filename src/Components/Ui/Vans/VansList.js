@@ -2,15 +2,14 @@ import React from 'react'
 import './VansList.css'
 import AvailableVans from './AvailableVans'
 import { AllVans } from './AllVans';
-import {useSearchParams, useLocation} from 'react-router-dom'
+import {useSearchParams} from 'react-router-dom'
 
 function VansList() {
   const [params, setParams] = useSearchParams();
-  const location = useLocation();
-  console.log(location);
 
   const urlSearchParams = params.get('filterBy');
   const toStrParams = params.toString();
+
 
   const handleUseParams = (key, value) => {
     setParams(prevParams => {
@@ -36,7 +35,7 @@ function VansList() {
         {urlSearchParams && <span className='vanlist-filter-tab' onClick={()=>handleUseParams('filterBy', null)}>Clear Filters</span>}
     </div>
 
-    <AvailableVans filteredData={filteredData} toStrParams={toStrParams}/>
+    <AvailableVans filteredData={filteredData} toStrParams={toStrParams} urlSearchParams={urlSearchParams}/>
     </main>
   )
 }

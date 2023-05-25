@@ -3,15 +3,11 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import ErrorBoundary from "./Components/Ui/ErrorBoundary/ErrorBoundary";
 
-const LayoutHeader = React.lazy(() =>
-  import("./Components/Ui/LayoutHeader/LayoutHeader")
-);
+const LayoutHeader = React.lazy(() => import("./Components/Ui/LayoutHeader/LayoutHeader"));
 const Home = React.lazy(() => import("./Pages/Home/Home"));
 const About = React.lazy(() => import("./Pages/About/About"));
 const OurVans = React.lazy(() => import("./Pages/OurVans/OurVans"));
-const SingleVanDetails = React.lazy(() =>
-  import("./Pages/SingleVanDetails/SingleVanDetails")
-);
+const SingleVanDetails = React.lazy(() => import("./Pages/SingleVanDetails/SingleVanDetails"));
 const Host = React.lazy(() => import("./Pages/Host/Host"));
 const DashBoard = React.lazy(() => import("./Pages/Host/DashBoard"));
 const Income = React.lazy(() => import("./Pages/Host/Income"));
@@ -21,6 +17,7 @@ const SpecificVan = React.lazy(() => import("./Pages/Host/Vans/SpecificVan"));
 const Details = React.lazy(() => import("./Pages/Host/Vans/Details"));
 const Pricing = React.lazy(() => import("./Pages/Host/Vans/Pricing"));
 const Photos = React.lazy(() => import("./Pages/Host/Vans/Photos"));
+const NotFound = React.lazy(() => import('./Pages/NotFoundPage/NotFound'));
 
 function App() {
   return (
@@ -175,6 +172,11 @@ function App() {
                 </Route>
               </Route>
             </Route>
+            <Route path="*" element={
+            <Suspense fallback={<div>Loading..</div>}>
+              <NotFound/>
+            </Suspense>
+            }/>
           </Route>
         </Routes>
       </div>

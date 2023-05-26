@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router-dom";
 import ErrorBoundary from "./Components/Ui/ErrorBoundary/ErrorBoundary";
 
 const LayoutHeader = React.lazy(() => import("./Components/Ui/LayoutHeader/LayoutHeader"));
@@ -19,11 +19,8 @@ const Pricing = React.lazy(() => import("./Pages/Host/Vans/Pricing"));
 const Photos = React.lazy(() => import("./Pages/Host/Vans/Photos"));
 const NotFound = React.lazy(() => import('./Pages/NotFoundPage/NotFound'));
 
-function App() {
-  return (
-    <React.Fragment>
-      <div className="App">
-        <Routes>
+
+const router = createBrowserRouter(createRoutesFromElements(
           <Route
             path="/"
             element={
@@ -178,7 +175,13 @@ function App() {
             </Suspense>
             }/>
           </Route>
-        </Routes>
+));
+
+function App() {
+  return (
+    <React.Fragment>
+      <div className="App">
+        <RouterProvider router={router}/>
       </div>
     </React.Fragment>
   );

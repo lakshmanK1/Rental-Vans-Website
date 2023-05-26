@@ -2,6 +2,8 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router-dom";
 import ErrorBoundary from "./Components/Ui/ErrorBoundary/ErrorBoundary";
+import { loader as hostVansLoader} from "./Pages/Host/Vans/Vans";
+import ErrorElement from "./Pages/ErrorElement/ErrorElement";
 
 const LayoutHeader = React.lazy(() => import("./Components/Ui/LayoutHeader/LayoutHeader"));
 const Home = React.lazy(() => import("./Pages/Home/Home"));
@@ -125,6 +127,8 @@ const router = createBrowserRouter(createRoutesFromElements(
                       </Suspense>
                     </ErrorBoundary>
                   }
+                  loader={hostVansLoader}
+                  errorElement={<ErrorElement/>}
                 />
                 <Route
                   path=":id"

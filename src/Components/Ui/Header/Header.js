@@ -25,7 +25,7 @@ function Header() {
             <NavLink
               className="navlink-tab"
               style={({ isActive }) => (isActive ? isActiveStyle : null)}
-              to="/host"
+              to="host"
             >
               Host
             </NavLink>
@@ -35,7 +35,7 @@ function Header() {
             <NavLink
               className="navlink-tab"
               style={({ isActive }) => (isActive ? isActiveStyle : null)}
-              to="/vans"
+              to="vans"
             >
               Vans
             </NavLink>
@@ -45,9 +45,19 @@ function Header() {
             <NavLink
               className="navlink-tab"
               style={({ isActive }) => (isActive ? isActiveStyle : null)}
-              to="/aboutus"
+              to="aboutus"
             >
               About
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              className="navlink-tab"
+              style={({ isActive }) => (isActive ? isActiveStyle : null)}
+              to="auth"
+            >
+              Login
             </NavLink>
           </li>
         </ul>

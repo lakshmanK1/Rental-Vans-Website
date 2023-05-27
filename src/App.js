@@ -20,7 +20,7 @@ const Details = React.lazy(() => import("./Pages/Host/Vans/Details"));
 const Pricing = React.lazy(() => import("./Pages/Host/Vans/Pricing"));
 const Photos = React.lazy(() => import("./Pages/Host/Vans/Photos"));
 const NotFound = React.lazy(() => import('./Pages/NotFoundPage/NotFound'));
-
+const Authentication = React.lazy(()=>import('./Components/Ui/Authentications/Authentication'));
 
 const router = createBrowserRouter(createRoutesFromElements(
           <Route
@@ -49,6 +49,17 @@ const router = createBrowserRouter(createRoutesFromElements(
                 <ErrorBoundary>
                   <Suspense fallback={<div>Loading..</div>}>
                     <About />
+                  </Suspense>
+                </ErrorBoundary>
+              }
+            />
+
+            <Route
+              path="auth"
+              element={
+                <ErrorBoundary>
+                  <Suspense fallback={<div>Loading..</div>}>
+                    <Authentication />
                   </Suspense>
                 </ErrorBoundary>
               }
